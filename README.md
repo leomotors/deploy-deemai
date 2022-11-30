@@ -11,3 +11,5 @@ Use [Deploy Deemai](https://github.com/narze/deploydeemai.today)'s api 🙇
 [Action File](.github/workflows/deploydeemai.yml)
 
 See pull request tabs of this repo :trollface:
+
+onegai onegai onegai
