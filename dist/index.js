@@ -69,7 +69,7 @@ function main() {
         if (!pull_request) {
             throw new Error("Pull Request not found");
         }
-        yield octokit.rest.pulls.createReviewComment(Object.assign(Object.assign({}, github.context.repo), { pull_number: pull_request.number, body: `### ${deploydeemai ? "✅" : "❌"} ${message}` }));
+        yield octokit.rest.issues.createComment(Object.assign(Object.assign({}, github.context.repo), { issue_number: pull_request.number, body: `### ${deploydeemai ? "✅" : "❌"} ${message}` }));
         if (!deploydeemai) {
             core.setFailed("Please avoid deploying");
         }
