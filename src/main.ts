@@ -42,9 +42,9 @@ async function main() {
     throw new Error("Pull Request not found");
   }
 
-  await octokit.rest.pulls.createReviewComment({
+  await octokit.rest.issues.createComment({
     ...github.context.repo,
-    pull_number: pull_request.number,
+    issue_number: pull_request.number,
     body: `### ${deploydeemai ? "✅" : "❌"} ${message}`,
   });
 
