@@ -1,7 +1,5 @@
 {
-  "plugins": ["jest", "@typescript-eslint"],
   "extends": [
-    "plugin:github/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
@@ -13,13 +11,10 @@
   },
   "rules": {
     "prettier/prettier": "warn",
-    "eqeqeq": "warn",
-    "import/no-namespace": "off",
-    "github/no-then": "off"
+    "eqeqeq": "warn"
   },
   "env": {
     "node": true,
-    "es6": true,
-    "jest/globals": true
+    "es6": true
   }
 }

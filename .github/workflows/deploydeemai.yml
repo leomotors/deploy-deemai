@@ -1,0 +1,17 @@
+name: "Deploy Deemai"
+
+on:
+  pull_request:
+    # list all your production branch
+    branches: [main]
+
+jobs:
+  deemai:
+    name: "🤔"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy Deemai
+        uses: Leomotors/deploy-deemai@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
